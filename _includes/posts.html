@@ -1,0 +1,15 @@
+<div>
+{% for post in site.posts %}
+<h2>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+</h2>
+    <p>
+    	{{ post.excerpt }}
+    </p>
+    <p>
+    	Publish: {{ post.date | date: "%Y/%m/%d"}}
+    	<a href="{{ post.url | prepend: site.baseurl }}">Baca Lebih Lanjut</a>
+    </p>
+    <hr>
+{% endfor %}
+</div>

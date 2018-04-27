@@ -1,0 +1,15 @@
+permalink: /:year/:month/:day/
+
+#theme: jekyll-theme-modernist
+title: "Blog ETH0 Academy"
+description: "Training, Service, and IT Support"
+
+show_downloads: true
+is_project_page: true
+
+github:
+  home_url: https://eth-nol.com/
+  owner_name: eth-nol
+
+baseurl: "/blog/"
+url: "https://eth-nol.com"
