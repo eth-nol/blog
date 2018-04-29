@@ -34,6 +34,8 @@ add name=vlan2 vlan-id=12 interface=vlan1
 ```
 Jika ada paket yang dikirim melalui interfaces 'vlan2', dua tag vlan akan ditambahkan ke header ethernet - '11' dan '12'.
 
+![Iklan]({{"/images/ads.jpg" | absolute_url}})
+
 #### Properties
 ***
 
