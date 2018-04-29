@@ -19,8 +19,8 @@
         {% if site.description or site.github.project_tagline %}
           <p>{{ site.description | default: site.github.project_tagline }}</p>
         {% endif %} 
-        <p class="view"><a href="{{ site.url }}">View the Beranda<small>{{ github_name }}</small></a></p>
-        <p class="view"><a href="{{ site.baseurl }}">View the Home<small>{{ github_name }}</small></a></p>
+        <p class="view"><a href="{{ site.url }}">View the Home<small>{{ github_name }}</small></a></p>
+        <p class="view"><a href="{{ site.baseurl }}">View the Beranda<small>{{ github_name }}</small></a></p>
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
         <ul>
         {% if site.show_downloads %}
