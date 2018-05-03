@@ -42,8 +42,14 @@ Jika ada paket yang dikirim melalui interfaces 'vlan2', dua tag vlan akan ditamb
 | Property  | Penjelasan |
 |:----------|:-----------|
 | `arp` (`disabled | enabled | proxy-arp | reply-only`; Default: `enabled`) | Mode Address Resolution Protocol |
-| `interface` (`name`; Default: ) | Nama interfaces fisik teratas dari VLAN yang work |
-| `l2mtu` (`integer`; Default: )  | Layer2 MTU. Untuk VLAN, nilai ini tidak dapat dikonfigurasi |
+| `interface` (*name*; Default: ) | Nama interfaces fisik teratas dari VLAN yang work |
+| `l2mtu` (*integer*; Default: )  | Layer2 MTU. Untuk VLAN, nilai ini tidak dapat dikonfigurasi |
+| `mtu` (`integer`;Default: 1500) | MTU Layer3 |
+| `use-service-tag` (`yes | no`; Default: ) | 802.1ad compatible Service Tag |
+| `vlan-id` (`integer: 4095`; Default: 1) | Identifier atau tag Virtual LAN yang digunakan untuk membedakan VLAN. Harus sama untuk semua komputer bahwa termasuk VLAN yang sama |
+
+> **Catatan:**<br> 
+> MTU harus diatur ke 1500 byte sama seperti pada interfaces Ethernet. Tetapi ini mungkin tidak berfungsi dengan beberapa Ethernet card yang tidak mendukung receiving/transmitting paket Ethernet ukuran full dengan header VLAN yang ditambahkan (1500 byte data + 4 byte header VLAN + 14 byte header Ethernet). Dalam situasi ini MTU 1496 dapat digunakan, tetapi perhatikan bahwa ini akan menyebabkan paket fragmentasi jika paket yang terlalu besar harus dikirim melalui interface. Pada saat yang sama ingat bahwa MTU 1496 dapat menyebabkan masalah jika jalur discovery MTU tidak berfungsi dengan benar antara source dan destination.
 
 **... To be continue**
 
