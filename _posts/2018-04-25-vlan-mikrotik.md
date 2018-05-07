@@ -51,6 +51,16 @@ Jika ada paket yang dikirim melalui interfaces 'vlan2', dua tag vlan akan ditamb
 > **Catatan:**<br> 
 > MTU harus diatur ke 1500 byte sama seperti pada interfaces Ethernet. Tetapi ini mungkin tidak berfungsi dengan beberapa Ethernet card yang tidak mendukung receiving/transmitting paket Ethernet ukuran full dengan header VLAN yang ditambahkan (1500 byte data + 4 byte header VLAN + 14 byte header Ethernet). Dalam situasi ini MTU 1496 dapat digunakan, tetapi perhatikan bahwa ini akan menyebabkan paket fragmentasi jika paket yang terlalu besar harus dikirim melalui interface. Pada saat yang sama ingat bahwa MTU 1496 dapat menyebabkan masalah jika jalur discovery MTU tidak berfungsi dengan benar antara source dan destination.
 
+#### Contoh Leyer2 VLAN
+***
+
+> **Peringatan:**<br>
+> Konfigurasi ini diketahui menyebabkan masalah dengan perangkat vendor lain, terutama di jaringan yang mengaktifkan STP, Anda harus menggunakan penyaringan bridge VLAN sebagai gantinya jika Anda menggunakan RouterOS v6.41 atau yang lebih baru. Anda dapat membaca lebih lanjut tentang ini di [Sini](https://wiki.mikrotik.com/wiki/Manual:Layer2_misconfiguration#VLAN_in_bridge_with_a_physical_interface).
+
+##### Port based VLAN tagging #1 (Trunk and Access ports)
+
+![Secenario Vlan]({{"/images/scenario-vlan.png" | absolute_url}})
+
 **... To be continue**
 
 
